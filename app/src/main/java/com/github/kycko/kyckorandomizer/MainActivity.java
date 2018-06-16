@@ -14,6 +14,8 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     public static final String intentMaxNum       = "com.github.kycko.kyckorandomizer.max_num";
     public static final String intentActivityType = "com.github.kycko.kyckorandomizer.activityType";
+    public static final String intentCubeSize = "com.github.kycko.kyckorandomizer.cubeSize";
+    String cubeSizeNum;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +33,20 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.run_cube:
+            case R.id.run_cube_7:
+                cubeSizeNum = "7";
+                launchIntAndCubeRandomizer("cube");
+                return true;
+            case R.id.run_cube_6:
+                cubeSizeNum = "6";
+                launchIntAndCubeRandomizer("cube");
+                return true;
+            case R.id.run_cube_5:
+                cubeSizeNum = "5";
+                launchIntAndCubeRandomizer("cube");
+                return true;
+            case R.id.run_cube_4:
+                cubeSizeNum = "4";
                 launchIntAndCubeRandomizer("cube");
                 return true;
             default: return super.onOptionsItemSelected(item);
@@ -41,10 +56,13 @@ public class MainActivity extends AppCompatActivity {
     private void launchIntAndCubeRandomizer(String myString) {
         final Intent intent = new Intent(this, IntRandomizerResultActivity.class);
         String typeStringObj = new String("cube");
-        if (!myString.equals(typeStringObj)) {
+
+        if (myString.equals(typeStringObj)) intent.putExtra(intentCubeSize, cubeSizeNum);
+        else {
             intent.putExtra(intentMaxNum, myString);
             typeStringObj = new String("int");
         }
+
         intent.putExtra(intentActivityType, typeStringObj);
         startActivity(intent);
     }

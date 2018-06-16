@@ -2,8 +2,23 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/run_cube"
-        android:icon="@drawable/ic_casino_white_24dp"
-        android:title="@string/cube"
+        android:id="@+id/run_cube_7"
+        android:icon="@drawable/ic_filter_7_black_24dp"
+        android:title="7x7x7"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/run_cube_6"
+        android:icon="@drawable/ic_filter_6_black_24dp"
+        android:title="6x6x6"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/run_cube_5"
+        android:icon="@drawable/ic_filter_5_black_24dp"
+        android:title="5x5x5"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/run_cube_4"
+        android:icon="@drawable/ic_filter_4_black_24dp"
+        android:title="4x4x4"
         app:showAsAction="ifRoom" />
 </menu>

@@ -6,7 +6,6 @@
     <string name="button_int_randomizer_result_refresh">Обновить</string>
     <string name="int_randomizer_result_title">В диапазоне [1:%1$s]</string>
     <string name="go_back_text">Назад</string>
-    <string name="cube">Куб</string>
     <string name="title_diapasone">В диапазоне [1:%1$s]</string>
     <string name="version_lbl">Версия 1.1.0-alpha</string>
 </resources>

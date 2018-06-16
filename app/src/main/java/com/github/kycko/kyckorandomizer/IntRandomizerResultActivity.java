@@ -38,7 +38,7 @@ public class IntRandomizerResultActivity extends AppCompatActivity {
                 toolbarObj.setTitle(getString(R.string.title_diapasone, myString));
                 break;
             case "cube":
-                cubeVariations = new cubeVariations();
+                cubeVariations = new cubeVariations(getIntent().getStringExtra(MainActivity.intentCubeSize));
                 max = cubeVariations.getLength();
                 TextView textViewObj = findViewById(R.id.lbl_result);
                 textViewObj.setTextSize(30);
