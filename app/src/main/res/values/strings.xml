@@ -7,5 +7,5 @@
     <string name="int_randomizer_result_title">В диапазоне [1:%1$s]</string>
     <string name="go_back_text">Назад</string>
     <string name="title_diapasone">В диапазоне [1:%1$s]</string>
-    <string name="version_lbl">Версия 1.1.0</string>
+    <string name="version_lbl">Версия 1.1.1</string>
 </resources>
