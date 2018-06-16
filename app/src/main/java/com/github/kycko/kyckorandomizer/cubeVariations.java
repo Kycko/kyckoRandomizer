@@ -107,7 +107,10 @@ final class cubeVariations {
                 };
                 break;
             default:                // for [case "4"]
-                data = new byte[][][]{{{1,2},{2,1}}};
+                data = new byte[][][]{
+                        {{1,1},{1,1}}, // 1
+                        {{1,2},{0,1}}, // 2
+                };
         }
     }
 
@@ -117,7 +120,7 @@ final class cubeVariations {
     String getNew(Random rnd) {
         int curChoice;
         do curChoice = rnd.nextInt(getLength());
-        while (curChoice == cubeDisplayed && getLength() > 1);
+        while (curChoice == cubeDisplayed);
         cubeDisplayed = curChoice;
         return transform(data[curChoice]);
 
