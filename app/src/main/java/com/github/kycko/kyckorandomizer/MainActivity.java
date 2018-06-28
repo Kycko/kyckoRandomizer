@@ -77,12 +77,8 @@ public class MainActivity extends AppCompatActivity {
                 Toast.LENGTH_SHORT
         ).show();
     }
-    public void button2Pressed (View view) {extractButtonText(R.id.button2);}
-    public void button3Pressed (View view) {extractButtonText(R.id.button3);}
-    public void button10Pressed(View view) {extractButtonText(R.id.button10);}
-
-    private void extractButtonText(int ID) {
-        final Button reqWidget = findViewById(ID);
+    public void NumButtonPressed (View view) {
+        final Button reqWidget = findViewById(view.getId());
         launchIntAndCubeRandomizer(reqWidget.getText().toString());
     }
 }
